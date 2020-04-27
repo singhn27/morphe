@@ -12,6 +12,12 @@ from __future__ import print_function
 
 import requests
 
+# Parameters #
+
+ps = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 
+    47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 
+    107, 109, 113, 127, 131, 137, 139, 149]
+
 # Functions #
 
 # Utilities
@@ -48,9 +54,6 @@ class Form(object):
 # Execution #
 
 if __name__ == '__main__':
-    ps = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 
-        43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 
-        103, 107, 109, 113, 127, 131, 137, 139, 149]
     form = Form(weight=1,level=(3**3)*(7**2),artin_degree=6)
     print('p,a_p')
     for p in ps:
