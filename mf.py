@@ -35,6 +35,12 @@ def get_form_params(verbose=False,debug=True,**parameters):
     else:
         raise Exception('Request failed')
 
+def example_form():
+    form = Form(weight=1,level=(3**3)*(7**2),artin_degree=6)
+    print('p,a_p')
+    for p in ps:
+        print('{},{}'.format(p, form.trace(p)))
+
 # Classes #
 
 class Form(object):
@@ -50,11 +56,3 @@ class Form(object):
             return self.traces[n-1]
         except Exception as e:
             raise NotImplementedError
-
-# Execution #
-
-if __name__ == '__main__':
-    form = Form(weight=1,level=(3**3)*(7**2),artin_degree=6)
-    print('p,a_p')
-    for p in ps:
-        print('{},{}'.format(p, form.trace(p)))
